@@ -1,0 +1,13 @@
+<h1>Lista de Categorias</h1>
+{{#each category}}
+<div class="card mt-3">
+    <div class="card-body">
+<h5>{{this.name}}</h5><br>
+<a href="/categories/{{this.slug}}"><button class="btn btn-primary">Posts da Categoria</button></a>
+    </div>
+</div>
+
+
+{{else}}
+
+{{/each}}

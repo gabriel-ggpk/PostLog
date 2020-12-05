@@ -1,0 +1,20 @@
+<h1>Sing up</h1>
+{{#each errors}}
+<div class="alert alert-danger">{{this.err}}</div>
+{{else}}
+{{/each}}
+<div class="card">
+    <div class="card-body">
+        <form action="/user/singup" method="post">
+            <label for="name">Name:</label>
+            <input type="text" name="name" class="form-control" required>
+            <label for="email">E-mail</label>
+            <input type="text" name="email" class="form-control" required>
+            <label for="password">Password:</label>
+            <input type="text" name="password"  class="form-control" required>
+            <label for="password2"> Repeat Password:</label>
+            <input type="text" name="password2"  class="form-control" required>
+            <button type="submit" class="btn btn-success mt-2">Sing up</button>
+        </form>
+    </div>
+</div>

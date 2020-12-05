@@ -1,0 +1,16 @@
+<h2>{{category.name}}</h2>
+<hr>
+{{#each posts}}
+<div class="card mt-2">
+    <div class="card-body">
+      
+        <h3>{{this.title}}</h3>
+        <p>{{this.description}}</p>
+        <a href="/post/read/{{this.slug}}"><button class="btn btn-success">Read more</button></a><hr>
+        
+      <small>Criado: {{date}}</small>
+    </div>
+</div>
+{{else}}
+<h5>No recent posts</h5>
+{{/each}}

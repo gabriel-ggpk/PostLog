@@ -1,0 +1,18 @@
+<h2>Lista de Posts</h2>
+<a href="/adm/post/add"><button class="btn btn-success" >adicionar Post</button></a>
+
+{{#each posts}}
+<div class="card">
+    <div class="card-body">
+    <h4> {{this.title}}</h4>   
+    <p>Description: {{this.description}}</p>
+    <small>Created: {{this.date}}</small><br>
+    <small>Category: {{this.category.name}}</small><br>
+    <a href="/adm/post/edit/{{_id}}"><button class="btn btn-success mt-2">Editar Post</button></a>
+    <a href="/adm/post/delete/{{_id}}"><button class="btn btn-danger mt-2">Deletar Post</button></a>
+    </div>
+
+</div>
+{{else}}
+<p>Nenhuma Postagem!!!</p>
+{{/each}}

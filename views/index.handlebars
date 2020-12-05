@@ -1,0 +1,25 @@
+<div class="jumbotron">
+  <h1 class="display-4">Welcome to PostLog</h1>
+  <p class="lead"></p>
+  <hr class="my-4">
+  <p></p>
+  <a class="btn btn-primary btn-lg" href="/user/singup" role="button">SingUp</a>
+</div>
+<hr>
+
+<h2>Recent Posts</h2>
+
+{{#each posts}}
+<div class="card mt-2">
+    <div class="card-body">
+      
+        <h3>{{this.title}}</h3>
+        <p>{{this.description}}</p>
+        <a href="/post/read/{{this.slug}}"><button class="btn btn-success">Read more</button></a><hr>
+        <small>category: {{category.name}}</small>
+      <small>Criado: {{date}}</small>
+    </div>
+</div>
+{{else}}
+<h5>No recent posts</h5>
+{{/each}}
